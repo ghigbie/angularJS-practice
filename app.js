@@ -1,6 +1,6 @@
 /* global angular*/
 /* global app*/
-
-var app = angular.module("minmax", []);
-
+(function() {
+    let app = angular.model("minmax", []);
+}());
 
