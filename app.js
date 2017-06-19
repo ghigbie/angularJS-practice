@@ -1,9 +1,7 @@
 /* global angular*/
 /* global app*/
 
-// (function() {
-//     let app = angular.model("minmax", []);
-// }());
+let app = angular.module('minmax', []);
 
 app.controller("MinMaxCtrl", function($scope, $http){
     $scope.formModel = {};
