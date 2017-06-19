@@ -1,0 +1,20 @@
+<div class=container ng-controller="CustomersController">
+    <h1>Customers with Controlelr</h1>
+    <br>
+    <table>
+        <tr>
+            <th ng-click="doSort('name')">Name</th>
+            <th ng-click="doSort('city)">City</th>
+            <th ng-click="doSort('orderTotal')">Order Total</th>
+            <th ng-click="doSort('joined')">Joined</th>
+        </tr>
+        <tr ng-repeat="cust in customers | filter: customerFilter | orderBy:sortBy:reverse" ng-cloak>
+            <td>{{ cust.name | uppercase}}</td>
+            <td>{{ cust.citye }}</td>
+            <td>{{ cust.orderTotal | currency }}</td>
+            <td>{{ cust.joined | date }}</td>
+        </tr>
+    </table>
+    <br>
+    <h3>Total customers: {{ customers.length }}</h3>
+</div>
