@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/ghigbie/angularJS-practice#readme",
   "dependencies": {
+    "angular": "^1.6.4",
+    "bootstrap": "^4.0.0-alpha.6",
     "express": "^4.15.3",
     "node": "0.0.0"
   }
