@@ -3,18 +3,22 @@
 
 let app = angular.module('minmax', []);
 
-app.controller("MinMaxCtrl", function($scope, $http){
-    $scope.formModel = {};
-    
-    $scope.onSubmit = function() {
-        console.log("Hey i'm submitted");
-        console.log($scope.formModel);
-        
-        $http.post('https://minmax-server.herokuapp.com/register', $scope.formModel)
-            .success(function(data){
-                console.log(": )");
-            }).error(function(Data){
-               console.log(": ("); 
-            });
-    };
+app.controller('MinMaxCtrl', function($scope){
+	$scope.formModel = {};
+
+	let clickCount = 0;
+	let times = "time";
+	let messageElement = document.getElementById("messageElement");
+	let message = "";
+
+	$scope.onSubmit = function(){
+		clickCount++;
+		if(clickCount > 1){
+			times = "times";
+		}
+		message = `The form was submitted ${clickCount} ${times}.`;
+		messageElement.innerHTML = message;
+		console.log(message);
+		console.log($scope.formModel);
+	};
 });
