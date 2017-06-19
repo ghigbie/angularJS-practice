@@ -3,25 +3,36 @@
     <head>
         <meta charset="utf-8">
         <title>Authentication Form</title>
-        <link rel="stylesheet" href="./../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
     <body>
-        <div class="container">
-            <h1>Authentication Form</h1>
-            <form class="form">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Controllers & Authentication Form </a>
+                </div>
+            </div>
+        </nav>
+   
+        <div class="container main-content">
+            <form>
                 <div class="form-group">
-                    <label for="">Name</label>
-                    <input type="text" id="name" name="name" />
+                    <label for="name">Name</label>
+                    <input class="form-controll" type="text" id="name" name="name"/>
                 </div>
                 <div class="form-group">
-                    <label for="">User Name</label>
-                    <input type="text" id="id" name="id"/>
+                    <label for="email">Email</label>
+                    <input class="form-controll" type="email" id="email" name="email"/>
                 </div>
                 <div class="form-group">
-                    <lable for="">Password</lable>
-                    <input type="password" id="password" name="password"/>
+                    <label for="password">Password</label>
+                    <input class="form-controll" type="password" id="password" name="password"/>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary">Register</button>
                 </div>
             </form>
+            </div>
         </div>
         <script src="./../node_modules/angular/angular.min.js"></script>
     </body>
